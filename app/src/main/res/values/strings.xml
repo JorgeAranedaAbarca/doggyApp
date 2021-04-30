@@ -1,0 +1,7 @@
+<resources>
+    <string name="app_name">DoggyApp</string>
+    <string name="txt_welcome">¡Bienvenido! Presiona "ENTRAR" para ver razas de perros</string>
+    <string name="txt_breed">Bulldog</string>
+    <string name="txt_btn_welcome">ENTRAR</string>
+    <string name="txt_breed_desc">Existen 3 tipos de Bulldog, Bostón, French, English</string>
+</resources>
