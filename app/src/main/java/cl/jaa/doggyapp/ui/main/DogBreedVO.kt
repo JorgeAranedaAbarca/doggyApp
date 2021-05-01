@@ -1,11 +1,11 @@
 package cl.jaa.doggyapp.ui.main
 
-import cl.jaa.doggyapp.domain.entities.DogBreed
+import cl.jaa.doggyapp.domain.entities.DogBreedEntity
 
 data class DogBreedVO(
     val breedName : String? = ""
 )
-fun DogBreed.toViewObject() = DogBreedVO(
+fun DogBreedEntity.toViewObject() = DogBreedVO(
     breedName = breedName
 )
 

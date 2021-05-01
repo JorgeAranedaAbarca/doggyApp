@@ -13,6 +13,6 @@ val appModule = module {
     single<DogBreedRepository> { DefaultDogBreedRepository(get()) }
     viewModel { WelcomeViewModel() }
     viewModel { MainViewModel(get()) }
-    viewModel { DetailDogBreedViewModel() }
+    viewModel { DetailDogBreedViewModel(get()) }
 }
 

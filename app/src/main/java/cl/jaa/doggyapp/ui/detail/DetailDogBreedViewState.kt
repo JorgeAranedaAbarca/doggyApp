@@ -7,5 +7,4 @@ sealed class DetailDogBreedViewState {
     class NoResultState(val message: String) : DetailDogBreedViewState()
 
     class SuccessState(val items: DetailDogBreedVO) : DetailDogBreedViewState()
-    class SuccessImagesState(val images: List<String>) : DetailDogBreedViewState()
 }
