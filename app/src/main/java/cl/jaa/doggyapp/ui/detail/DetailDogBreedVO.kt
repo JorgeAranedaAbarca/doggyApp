@@ -1,6 +1,5 @@
 package cl.jaa.doggyapp.ui.detail
 
-import android.text.SpannableStringBuilder
 import cl.jaa.doggyapp.domain.entities.DogBreedEntity
 
 data class DetailDogBreedVO(
@@ -18,22 +17,22 @@ fun DogBreedEntity.toDetailDogBreedVO() = DetailDogBreedVO(
 )
 
 fun getDescription(subBreed: List<String>?, breedName: String): String {
-    val descr = ""
+    val descr = StringBuilder()
     if (subBreed != null) {
         if (subBreed.isNotEmpty()) {
-            descr.plus("Existen ${subBreed.size} subraza de $breedName; ")
+            descr.append("Existen ${subBreed.size} subraza de $breedName; ")
 
             for ((idx, value) in subBreed.withIndex()) {
-                descr.plus(value)
-                if(idx < subBreed.size){
-                    descr.plus("-")
+                descr.append(value)
+                if (idx < subBreed.size) {
+                    descr.append("-")
                 }
             }
 
         } else {
-            descr.plus("No existen subtipos para $breedName")
+            descr.append("No existen subtipos para $breedName")
 
         }
     }
-    return descr
+    return descr.toString()
 }
