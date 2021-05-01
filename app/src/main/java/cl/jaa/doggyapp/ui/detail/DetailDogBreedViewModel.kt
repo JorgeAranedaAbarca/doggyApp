@@ -20,7 +20,6 @@ class DetailDogBreedViewModel(private val repository: DogBreedRepository) : View
 
     fun getBreedInfo(breedName: String) {
         _viewState.postValue(DetailDogBreedViewState.LoadingState)
-        //get images
         viewModelScope.launch {
             try {
                 val vo = repository.getDogBreedInfo(breedName)?.toDetailDogBreedVO()

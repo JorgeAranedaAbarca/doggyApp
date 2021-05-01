@@ -18,8 +18,6 @@ class MainViewModel(private val repository: DogBreedRepository) : ViewModel() {
 
     fun getDogBreeds() {
         _viewState.postValue(MainViewState.LoadingState)
-        val list = listOf<DogBreedVO>()
-
         viewModelScope.launch {
             try {
                 val list = repository.getBreeds().map {

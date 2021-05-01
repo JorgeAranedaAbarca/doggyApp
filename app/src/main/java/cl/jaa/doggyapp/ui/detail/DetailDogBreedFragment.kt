@@ -53,8 +53,6 @@ class DetailDogBreedFragment : Fragment() {
                     Picasso.get().load(it[position]).into(imageView)
                 }
                 bind.cvDogBreedImages.pageCount = it.size
-
-
             }
         }
 

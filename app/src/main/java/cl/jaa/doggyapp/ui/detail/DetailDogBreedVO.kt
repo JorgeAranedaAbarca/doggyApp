@@ -18,26 +18,22 @@ fun DogBreedEntity.toDetailDogBreedVO() = DetailDogBreedVO(
 )
 
 fun getDescription(subBreed: List<String>?, breedName: String): String {
-    val descr = SpannableStringBuilder()
+    val descr = ""
     if (subBreed != null) {
         if (subBreed.isNotEmpty()) {
-            descr.append("Existen ${subBreed.size} tipos de $breedName ")
+            descr.plus("Existen ${subBreed.size} subraza de $breedName; ")
 
             for ((idx, value) in subBreed.withIndex()) {
-                descr.append(value)
-                if (idx == subBreed.size - 1) {
-                    descr.append(".")
-                } else if (idx >= 0 && idx < subBreed.size - 2) {
-                    descr.append(", ")
-                } else if (idx == subBreed.size - 2) {
-                    descr.append(" y ")
+                descr.plus(value)
+                if(idx < subBreed.size){
+                    descr.plus("-")
                 }
             }
 
         } else {
-            descr.append("No existen subtipos para $breedName")
+            descr.plus("No existen subtipos para $breedName")
 
         }
     }
-    return descr.toString()
+    return descr
 }
